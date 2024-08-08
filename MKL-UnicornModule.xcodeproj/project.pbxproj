@@ -7,12 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		68CC37BDDBA8701E66C1994B /* Pods_MKL_UnicornModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 245E8FE7966CC72B40C4B82A /* Pods_MKL_UnicornModule.framework */; };
 		9E7F28BC2C64EAC600671FE2 /* MKL_UnicornModule.h in Headers */ = {isa = PBXBuildFile; fileRef = 9E7F28BB2C64EAC600671FE2 /* MKL_UnicornModule.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		245E8FE7966CC72B40C4B82A /* Pods_MKL_UnicornModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MKL_UnicornModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5DCA574973BAC57B055002E8 /* Pods-MKL-UnicornModule.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MKL-UnicornModule.release.xcconfig"; path = "Target Support Files/Pods-MKL-UnicornModule/Pods-MKL-UnicornModule.release.xcconfig"; sourceTree = "<group>"; };
 		9E7F28B82C64EAC600671FE2 /* MKL_UnicornModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MKL_UnicornModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E7F28BB2C64EAC600671FE2 /* MKL_UnicornModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MKL_UnicornModule.h; sourceTree = "<group>"; };
+		A3982AB32A7D9961D7880CA8 /* Pods-MKL-UnicornModule.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MKL-UnicornModule.debug.xcconfig"; path = "Target Support Files/Pods-MKL-UnicornModule/Pods-MKL-UnicornModule.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -20,17 +24,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68CC37BDDBA8701E66C1994B /* Pods_MKL_UnicornModule.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0D5E9F8FEA838B06C3009484 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A3982AB32A7D9961D7880CA8 /* Pods-MKL-UnicornModule.debug.xcconfig */,
+				5DCA574973BAC57B055002E8 /* Pods-MKL-UnicornModule.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		9E7F28AE2C64EAC600671FE2 = {
 			isa = PBXGroup;
 			children = (
 				9E7F28BA2C64EAC600671FE2 /* MKL-UnicornModule */,
 				9E7F28B92C64EAC600671FE2 /* Products */,
+				0D5E9F8FEA838B06C3009484 /* Pods */,
+				B771C05B66CC7DC9F7357E78 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -48,6 +65,14 @@
 				9E7F28BB2C64EAC600671FE2 /* MKL_UnicornModule.h */,
 			);
 			path = "MKL-UnicornModule";
+			sourceTree = "<group>";
+		};
+		B771C05B66CC7DC9F7357E78 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				245E8FE7966CC72B40C4B82A /* Pods_MKL_UnicornModule.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -68,6 +93,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9E7F28BF2C64EAC600671FE2 /* Build configuration list for PBXNativeTarget "MKL-UnicornModule" */;
 			buildPhases = (
+				DD1B189B4042AE485061DB02 /* [CP] Check Pods Manifest.lock */,
 				9E7F28B32C64EAC600671FE2 /* Headers */,
 				9E7F28B42C64EAC600671FE2 /* Sources */,
 				9E7F28B52C64EAC600671FE2 /* Frameworks */,
@@ -123,6 +149,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		DD1B189B4042AE485061DB02 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MKL-UnicornModule-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		9E7F28B42C64EAC600671FE2 /* Sources */ = {
@@ -262,6 +313,7 @@
 		};
 		9E7F28C02C64EAC600671FE2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A3982AB32A7D9961D7880CA8 /* Pods-MKL-UnicornModule.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -293,6 +345,7 @@
 		};
 		9E7F28C12C64EAC600671FE2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5DCA574973BAC57B055002E8 /* Pods-MKL-UnicornModule.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;

@@ -1,0 +1,6 @@
+framework module Pods_MKL_UnicornModule {
+  umbrella header "Pods-MKL-UnicornModule-umbrella.h"
+
+  export *
+  module * { export * }
+}
