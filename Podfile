@@ -8,5 +8,8 @@ target 'MKL-UnicornModule' do
   # Pods for MKL-UnicornModule
   pod 'FirebaseFirestore'
   pod 'FirebaseAuth'
+  
+  pod 'MKL-NifflersModule', :git => 'https://github.com/njm181/MKL-NifflersModule.git', :tag => "0.0.7"
+  #pod 'MKL-NifflersModule', :git => 'https://github.com/njm181/MKL-NifflersModule.git', :branch => 'master'
 
 end

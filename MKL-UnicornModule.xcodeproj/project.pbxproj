@@ -8,14 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		68CC37BDDBA8701E66C1994B /* Pods_MKL_UnicornModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 245E8FE7966CC72B40C4B82A /* Pods_MKL_UnicornModule.framework */; };
+		9E51C86F2C6AC83400753472 /* FirestoreDataSourceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E51C86E2C6AC83400753472 /* FirestoreDataSourceImpl.swift */; };
+		9E51C8712C6AC86B00753472 /* DataSourceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E51C8702C6AC86B00753472 /* DataSourceService.swift */; };
+		9E6D27622C67EC7C001665D1 /* FirestoreRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6D27612C67EC7C001665D1 /* FirestoreRepositoryImpl.swift */; };
 		9E7F28BC2C64EAC600671FE2 /* MKL_UnicornModule.h in Headers */ = {isa = PBXBuildFile; fileRef = 9E7F28BB2C64EAC600671FE2 /* MKL_UnicornModule.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9E87C9502C6795E2009AD02F /* FirebaseConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E87C94F2C6795E2009AD02F /* FirebaseConfig.swift */; };
+		9E88B0962C699286002B1066 /* MarketItemDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E88B0952C699286002B1066 /* MarketItemDTO.swift */; };
+		9E88B0992C6992BB002B1066 /* MarketItemMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E88B0982C6992BB002B1066 /* MarketItemMapper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		245E8FE7966CC72B40C4B82A /* Pods_MKL_UnicornModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MKL_UnicornModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DCA574973BAC57B055002E8 /* Pods-MKL-UnicornModule.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MKL-UnicornModule.release.xcconfig"; path = "Target Support Files/Pods-MKL-UnicornModule/Pods-MKL-UnicornModule.release.xcconfig"; sourceTree = "<group>"; };
+		9E51C86E2C6AC83400753472 /* FirestoreDataSourceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreDataSourceImpl.swift; sourceTree = "<group>"; };
+		9E51C8702C6AC86B00753472 /* DataSourceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSourceService.swift; sourceTree = "<group>"; };
+		9E6D27612C67EC7C001665D1 /* FirestoreRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreRepositoryImpl.swift; sourceTree = "<group>"; };
 		9E7F28B82C64EAC600671FE2 /* MKL_UnicornModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MKL_UnicornModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E7F28BB2C64EAC600671FE2 /* MKL_UnicornModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MKL_UnicornModule.h; sourceTree = "<group>"; };
+		9E87C94F2C6795E2009AD02F /* FirebaseConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseConfig.swift; sourceTree = "<group>"; };
+		9E88B0952C699286002B1066 /* MarketItemDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketItemDTO.swift; sourceTree = "<group>"; };
+		9E88B0982C6992BB002B1066 /* MarketItemMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketItemMapper.swift; sourceTree = "<group>"; };
 		A3982AB32A7D9961D7880CA8 /* Pods-MKL-UnicornModule.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MKL-UnicornModule.debug.xcconfig"; path = "Target Support Files/Pods-MKL-UnicornModule/Pods-MKL-UnicornModule.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -37,8 +49,15 @@
 				A3982AB32A7D9961D7880CA8 /* Pods-MKL-UnicornModule.debug.xcconfig */,
 				5DCA574973BAC57B055002E8 /* Pods-MKL-UnicornModule.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		9E51C8722C6AC8B300753472 /* dataSourceImpl */ = {
+			isa = PBXGroup;
+			children = (
+				9E51C86E2C6AC83400753472 /* FirestoreDataSourceImpl.swift */,
+			);
+			path = dataSourceImpl;
 			sourceTree = "<group>";
 		};
 		9E7F28AE2C64EAC600671FE2 = {
@@ -62,9 +81,71 @@
 		9E7F28BA2C64EAC600671FE2 /* MKL-UnicornModule */ = {
 			isa = PBXGroup;
 			children = (
+				9E87C9492C679327009AD02F /* Data */,
 				9E7F28BB2C64EAC600671FE2 /* MKL_UnicornModule.h */,
 			);
 			path = "MKL-UnicornModule";
+			sourceTree = "<group>";
+		};
+		9E87C9492C679327009AD02F /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				9E51C8722C6AC8B300753472 /* dataSourceImpl */,
+				9E88B0972C6992A2002B1066 /* mappers */,
+				9E88B0942C69926B002B1066 /* dataSource */,
+				9E87C94E2C67935F009AD02F /* repositoryImpl */,
+				9E87C94B2C679339009AD02F /* persistence */,
+				9E87C94A2C679332009AD02F /* dto */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		9E87C94A2C679332009AD02F /* dto */ = {
+			isa = PBXGroup;
+			children = (
+				9E88B0952C699286002B1066 /* MarketItemDTO.swift */,
+			);
+			path = dto;
+			sourceTree = "<group>";
+		};
+		9E87C94B2C679339009AD02F /* persistence */ = {
+			isa = PBXGroup;
+			children = (
+				9E87C94C2C679347009AD02F /* firebase */,
+			);
+			path = persistence;
+			sourceTree = "<group>";
+		};
+		9E87C94C2C679347009AD02F /* firebase */ = {
+			isa = PBXGroup;
+			children = (
+				9E87C94F2C6795E2009AD02F /* FirebaseConfig.swift */,
+			);
+			path = firebase;
+			sourceTree = "<group>";
+		};
+		9E87C94E2C67935F009AD02F /* repositoryImpl */ = {
+			isa = PBXGroup;
+			children = (
+				9E6D27612C67EC7C001665D1 /* FirestoreRepositoryImpl.swift */,
+			);
+			path = repositoryImpl;
+			sourceTree = "<group>";
+		};
+		9E88B0942C69926B002B1066 /* dataSource */ = {
+			isa = PBXGroup;
+			children = (
+				9E51C8702C6AC86B00753472 /* DataSourceService.swift */,
+			);
+			path = dataSource;
+			sourceTree = "<group>";
+		};
+		9E88B0972C6992A2002B1066 /* mappers */ = {
+			isa = PBXGroup;
+			children = (
+				9E88B0982C6992BB002B1066 /* MarketItemMapper.swift */,
+			);
+			path = mappers;
 			sourceTree = "<group>";
 		};
 		B771C05B66CC7DC9F7357E78 /* Frameworks */ = {
@@ -119,6 +200,7 @@
 				TargetAttributes = {
 					9E7F28B72C64EAC600671FE2 = {
 						CreatedOnToolsVersion = 15.0.1;
+						LastSwiftMigration = 1500;
 					};
 				};
 			};
@@ -180,6 +262,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E87C9502C6795E2009AD02F /* FirebaseConfig.swift in Sources */,
+				9E88B0992C6992BB002B1066 /* MarketItemMapper.swift in Sources */,
+				9E88B0962C699286002B1066 /* MarketItemDTO.swift in Sources */,
+				9E51C86F2C6AC83400753472 /* FirestoreDataSourceImpl.swift in Sources */,
+				9E51C8712C6AC86B00753472 /* DataSourceService.swift in Sources */,
+				9E6D27622C67EC7C001665D1 /* FirestoreRepositoryImpl.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,6 +403,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A3982AB32A7D9961D7880CA8 /* Pods-MKL-UnicornModule.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -338,6 +427,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -347,6 +437,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5DCA574973BAC57B055002E8 /* Pods-MKL-UnicornModule.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
