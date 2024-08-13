@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		68CC37BDDBA8701E66C1994B /* Pods_MKL_UnicornModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 245E8FE7966CC72B40C4B82A /* Pods_MKL_UnicornModule.framework */; };
 		9E51C86F2C6AC83400753472 /* FirestoreDataSourceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E51C86E2C6AC83400753472 /* FirestoreDataSourceImpl.swift */; };
 		9E51C8712C6AC86B00753472 /* DataSourceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E51C8702C6AC86B00753472 /* DataSourceService.swift */; };
 		9E6D27622C67EC7C001665D1 /* FirestoreRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6D27612C67EC7C001665D1 /* FirestoreRepositoryImpl.swift */; };
@@ -15,11 +14,13 @@
 		9E87C9502C6795E2009AD02F /* FirebaseConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E87C94F2C6795E2009AD02F /* FirebaseConfig.swift */; };
 		9E88B0962C699286002B1066 /* MarketItemDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E88B0952C699286002B1066 /* MarketItemDTO.swift */; };
 		9E88B0992C6992BB002B1066 /* MarketItemMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E88B0982C6992BB002B1066 /* MarketItemMapper.swift */; };
+		BA9132FC563278C68CFD6E93 /* Pods_MKL_UnicornModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4656FE162A715C46F9BE4445 /* Pods_MKL_UnicornModule.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		245E8FE7966CC72B40C4B82A /* Pods_MKL_UnicornModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MKL_UnicornModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5DCA574973BAC57B055002E8 /* Pods-MKL-UnicornModule.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MKL-UnicornModule.release.xcconfig"; path = "Target Support Files/Pods-MKL-UnicornModule/Pods-MKL-UnicornModule.release.xcconfig"; sourceTree = "<group>"; };
+		1FED3CE610A2B3E9B331CCC6 /* Pods-MKL-UnicornModule.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MKL-UnicornModule.debug.xcconfig"; path = "Target Support Files/Pods-MKL-UnicornModule/Pods-MKL-UnicornModule.debug.xcconfig"; sourceTree = "<group>"; };
+		435A81224FF098288D660010 /* Pods-MKL-UnicornModule.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MKL-UnicornModule.release.xcconfig"; path = "Target Support Files/Pods-MKL-UnicornModule/Pods-MKL-UnicornModule.release.xcconfig"; sourceTree = "<group>"; };
+		4656FE162A715C46F9BE4445 /* Pods_MKL_UnicornModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MKL_UnicornModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E51C86E2C6AC83400753472 /* FirestoreDataSourceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreDataSourceImpl.swift; sourceTree = "<group>"; };
 		9E51C8702C6AC86B00753472 /* DataSourceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSourceService.swift; sourceTree = "<group>"; };
 		9E6D27612C67EC7C001665D1 /* FirestoreRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreRepositoryImpl.swift; sourceTree = "<group>"; };
@@ -28,7 +29,6 @@
 		9E87C94F2C6795E2009AD02F /* FirebaseConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseConfig.swift; sourceTree = "<group>"; };
 		9E88B0952C699286002B1066 /* MarketItemDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketItemDTO.swift; sourceTree = "<group>"; };
 		9E88B0982C6992BB002B1066 /* MarketItemMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketItemMapper.swift; sourceTree = "<group>"; };
-		A3982AB32A7D9961D7880CA8 /* Pods-MKL-UnicornModule.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MKL-UnicornModule.debug.xcconfig"; path = "Target Support Files/Pods-MKL-UnicornModule/Pods-MKL-UnicornModule.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,7 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				68CC37BDDBA8701E66C1994B /* Pods_MKL_UnicornModule.framework in Frameworks */,
+				BA9132FC563278C68CFD6E93 /* Pods_MKL_UnicornModule.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,10 +46,18 @@
 		0D5E9F8FEA838B06C3009484 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				A3982AB32A7D9961D7880CA8 /* Pods-MKL-UnicornModule.debug.xcconfig */,
-				5DCA574973BAC57B055002E8 /* Pods-MKL-UnicornModule.release.xcconfig */,
+				1FED3CE610A2B3E9B331CCC6 /* Pods-MKL-UnicornModule.debug.xcconfig */,
+				435A81224FF098288D660010 /* Pods-MKL-UnicornModule.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		4D588FB00EB95B1A3358A6D4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4656FE162A715C46F9BE4445 /* Pods_MKL_UnicornModule.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		9E51C8722C6AC8B300753472 /* dataSourceImpl */ = {
@@ -66,7 +74,7 @@
 				9E7F28BA2C64EAC600671FE2 /* MKL-UnicornModule */,
 				9E7F28B92C64EAC600671FE2 /* Products */,
 				0D5E9F8FEA838B06C3009484 /* Pods */,
-				B771C05B66CC7DC9F7357E78 /* Frameworks */,
+				4D588FB00EB95B1A3358A6D4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -148,14 +156,6 @@
 			path = mappers;
 			sourceTree = "<group>";
 		};
-		B771C05B66CC7DC9F7357E78 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				245E8FE7966CC72B40C4B82A /* Pods_MKL_UnicornModule.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -174,7 +174,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9E7F28BF2C64EAC600671FE2 /* Build configuration list for PBXNativeTarget "MKL-UnicornModule" */;
 			buildPhases = (
-				DD1B189B4042AE485061DB02 /* [CP] Check Pods Manifest.lock */,
+				524932102F4115CD8478F6CA /* [CP] Check Pods Manifest.lock */,
 				9E7F28B32C64EAC600671FE2 /* Headers */,
 				9E7F28B42C64EAC600671FE2 /* Sources */,
 				9E7F28B52C64EAC600671FE2 /* Frameworks */,
@@ -233,7 +233,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		DD1B189B4042AE485061DB02 /* [CP] Check Pods Manifest.lock */ = {
+		524932102F4115CD8478F6CA /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -401,7 +401,7 @@
 		};
 		9E7F28C02C64EAC600671FE2 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A3982AB32A7D9961D7880CA8 /* Pods-MKL-UnicornModule.debug.xcconfig */;
+			baseConfigurationReference = 1FED3CE610A2B3E9B331CCC6 /* Pods-MKL-UnicornModule.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -435,7 +435,7 @@
 		};
 		9E7F28C12C64EAC600671FE2 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5DCA574973BAC57B055002E8 /* Pods-MKL-UnicornModule.release.xcconfig */;
+			baseConfigurationReference = 435A81224FF098288D660010 /* Pods-MKL-UnicornModule.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;

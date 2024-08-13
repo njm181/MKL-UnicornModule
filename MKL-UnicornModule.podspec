@@ -13,5 +13,5 @@ Pod::Spec.new do |spec|
     spec.platform     = :ios, "13.0"
     spec.dependency "FirebaseFirestore"
     spec.dependency "FirebaseAuth"
-    spec.dependency "MKL-NifflersModule", :git => "https://github.com/njm181/MKL-NifflersModule.git", :tag => "0.0.7"
+    spec.dependency "MKL-NifflersModule"
   end
