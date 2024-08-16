@@ -13,7 +13,7 @@ public class FirestoreRepositoryImpl: DataRepository {
 
     private let firestoreDataSource: DataSourceService
     
-    init() {
+    public init() {
         self.firestoreDataSource = FirestoreDataSourceImpl()
     }
 
