@@ -16,10 +16,11 @@ public class FirestoreRepositoryImpl: DataRepository {
         self.firestoreDataSource = FirestoreDataSourceImpl()
     }
     
-    public func storeItem(collectionName: String, marketRequirement: MarketRequirement) async throws -> DataResultResponse<Any> {
+    public func storeItem(collectionName: String, documentName: String, marketRequirement: MarketRequirement) async throws -> DataResultResponse<Any> {
         let marketItemDTO = MarketItemMapper.mapToDTO(domain: marketRequirement.marketItem)
         let result = try await firestoreDataSource.saveItem(
             collectionName: collectionName,
+            documentName: documentName,
             marketItemDTO: marketItemDTO,
             quantity: marketRequirement.quantity
         )

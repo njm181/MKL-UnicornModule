@@ -9,6 +9,6 @@ import Foundation
 import MKL_NifflersModule
 
 protocol DataSourceProtocol {
-    func saveItem(collectionName: String, marketItemDTO: MarketItemDTO, quantity: Int) async throws -> DataResultResponse<Any>
+    func saveItem(collectionName: String, documentName: String, marketItemDTO: MarketItemDTO, quantity: Int) async throws -> DataResultResponse<Any>
     func fetchItems(collectionName: String) async throws -> DataResultResponse<Any>
 }

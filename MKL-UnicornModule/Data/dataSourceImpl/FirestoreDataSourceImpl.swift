@@ -10,15 +10,25 @@ import MKL_NifflersModule
 
 class FirestoreDataSourceImpl : DataSourceProtocol {
     
-    func saveItem(collectionName: String, marketItemDTO: MarketItemDTO, quantity: Int) async throws -> DataResultResponse<Any> {
+    func saveItem(
+        collectionName: String,
+        documentName: String,
+        marketItemDTO: MarketItemDTO,
+        quantity: Int
+    ) async throws -> DataResultResponse<Any> {
         do {
-            let ref = try await FirestoreConfig().db.collection(collectionName).addDocument(data: [
-            "market_item_name": marketItemDTO.name,
-            "market_item_category": marketItemDTO.category,
-            "quantity": quantity
-          ])
-            print("Document added with ID: \(ref.documentID)")
-            return DataResultResponse(data: ref.documentID, status: .SUCCESS, message: "Document stored correctly")
+            let ref: Void = try await FirestoreConfig()
+                .db
+                .collection(collectionName)
+                .document(documentName)
+                .setData([
+                    "market_item_name": marketItemDTO.name,
+                    "market_item_category": marketItemDTO.category,
+                    "quantity": quantity
+            
+            ])
+            print("Document added with ID: \(ref)")
+            return DataResultResponse(data: ref, status: .SUCCESS, message: "Document stored correctly")
         } catch {
             print("Error adding document: \(error)")
             return DataResultResponse(data: error, status: .FAILURE, message: error.localizedDescription)
