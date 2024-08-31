@@ -10,8 +10,10 @@ target 'MKL-UnicornModule' do
   pod 'FirebaseAuth'
   
   #pod 'MKL-NifflersModule', :git => 'https://github.com/njm181/MKL-NifflersModule.git', :tag => "0.0.7"
-  #pod 'MKL-NifflersModule', '~> 0.0.7'
-  pod 'MKL-NifflersModule'
+  pod 'MKL-NifflersModule', '~> 0.1.3'
+  #pod 'MKL-NifflersModule'
+  #pod 'MKL-NifflersModule', '0.0.8'
+
 
 
   #pod 'MKL-NifflersModule', :git => 'https://github.com/njm181/MKL-NifflersModule.git', :branch => 'master'

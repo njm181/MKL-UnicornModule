@@ -9,26 +9,37 @@ import Foundation
 import MKL_NifflersModule
 
 public class FirestoreRepositoryImpl: DataRepository {
-
-
-    private let firestoreDataSource: DataSourceService
+    
+    private let firestoreDataSource: DataSourceProtocol
     
     public init() {
         self.firestoreDataSource = FirestoreDataSourceImpl()
     }
-
-    public func saveItem(marketItem: MarketItem) async throws -> Bool {
-        let marketItemDTO = MarketItemMapper.mapToDTO(domain: marketItem)
-        let result = try await firestoreDataSource.saveItem(marketItemDTO: marketItemDTO)
+    
+    public func storeItem(collectionName: String, marketRequirement: MarketRequirement) async throws -> DataResultResponse<Any> {
+        let marketItemDTO = MarketItemMapper.mapToDTO(domain: marketRequirement.marketItem)
+        let result = try await firestoreDataSource.saveItem(
+            collectionName: collectionName,
+            marketItemDTO: marketItemDTO,
+            quantity: marketRequirement.quantity
+        )
         print("Saving item from Firestore Repository Impl: \(result)")
-        return true
+        return result
     }
     
-    public func fetchItems() async throws -> [MarketItem] {
-        let result = try await firestoreDataSource.fetchItems()
+    public func fetchItems(collectionName: String) async throws -> DataResultResponse<Any> {
+        var result = try await firestoreDataSource.fetchItems(collectionName: collectionName)
         print("Fetching items from Firestore Repository Impl: \(result)")
-        return result.map { MarketItemMapper.mapToDomain(dto: $0) }
+        //map to domain
+        var itemList: MarketList? = nil
+        if let marketListToDomain = result.data as? MarketListDTO {
+            itemList = MarketListMapper.mapToDomain(dto: marketListToDomain)
+        } else {
+            print("Data is not of type MarketListDTO")
+
+        }
+        result.data = itemList
+        return result
     }
-    
     
 }

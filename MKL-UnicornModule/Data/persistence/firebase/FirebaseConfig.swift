@@ -5,9 +5,14 @@
 //  Created by Nico Molina on 10/08/2024.
 //
 
-import Foundation
+import FirebaseCore
 import FirebaseFirestore
 
 struct FirestoreConfig {
-    public let db = Firestore.firestore()
+    public let db: Firestore
+
+    init() {
+        FirebaseApp.configure()
+        db = Firestore.firestore()
+    }
 }
