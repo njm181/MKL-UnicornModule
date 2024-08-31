@@ -22,9 +22,9 @@ class FirestoreDataSourceImpl : DataSourceProtocol {
                 .collection(collectionName)
                 .document(documentName)
                 .setData([
-                    "market_item_name": marketItemDTO.name,
-                    "market_item_category": marketItemDTO.category,
-                    "quantity": quantity
+                    "market_items": ["market_item_name": marketItemDTO.name,
+                                     "market_item_category": marketItemDTO.category,
+                                     "quantity": quantity]
             
             ])
             print("Document added with ID: \(ref)")
